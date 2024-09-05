@@ -10,6 +10,7 @@ const meta = {
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
     layout: 'fullscreen',
+    scrollBy: 'root',
   },
   args: {
     onLogin: fn(),
@@ -26,7 +27,10 @@ export const LoggedIn: Story = {
     user: {
       name: 'Jane Doe',
     },
+  
   },
 };
 
-export const LoggedOut: Story = {};
+export const LoggedOut: Story = {
+  args: {},
+};

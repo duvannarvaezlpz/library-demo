@@ -38,25 +38,33 @@ export const Header = ({
         alt=""
       />
     </div>
-    <div className="busqueda">
-      <i className="bx bx-search"></i>
-      <input className="search-input" placeholder="Comienza a buscar..." />
-      <i className="bx bx-filter"></i>
-    </div>
+    {user ? (
+      <div className="busqueda">
+        <i className="bx bx-search"></i>
+        <input className="search-input" placeholder="Comienza a buscar..." />
+        <i className="bx bx-filter"></i>
+      </div>
+    ) : (
+      <></>
+    )}
 
     <div className="items">
-      <ul className="elements">
-        <li>
-          <a href="#">
-            <i className="bx bx-bell"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i className="bx bx-grid"></i>
-          </a>
-        </li>
-      </ul>
+      {user ? (
+        <ul className="elements">
+          <li>
+            <a href="#">
+              <i className="bx bx-bell"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i className="bx bx-grid"></i>
+            </a>
+          </li>
+        </ul>
+      ) : (
+        <></>
+      )}
     </div>
   </header>
 );
