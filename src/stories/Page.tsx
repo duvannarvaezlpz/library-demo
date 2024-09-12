@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-import { Header } from './Header';
-import './page.css';
+import { Header } from "../components/ui/Header/Header";
+import "./page.css";
 
 type User = {
   name: string;
@@ -14,14 +14,13 @@ export const Page: React.FC = () => {
     <article>
       <Header
         user={user}
-        onLogin={() => setUser({ name: 'Jane Doe' })}
+        onLogin={() => setUser({ name: "Jane Doe" })}
         onLogout={() => setUser(undefined)}
-        onCreateAccount={() => setUser({ name: 'Jane Doe' })}
+        onCreateAccount={() => setUser({ name: "Jane Doe" })}
       />
 
       <section className="storybook-page">
         <h2>Pages in Storybook</h2>
-        
       </section>
     </article>
   );
